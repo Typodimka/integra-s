@@ -13,7 +13,8 @@ import DatePicker from '@mui/lab/DatePicker';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import {JSX} from 'react/jsx-runtime';
 import {useClients} from "./hooks/clients";
-import {Navigation} from "./components/navigation";
+import {Navigation} from "./components/Navigation";
+import CreateClient from "./components/CreateClient"
 
 // const {loading, error, clients }= useClients()
 
@@ -43,10 +44,9 @@ function App() {
 
   return (
   <>
-
+    <Navigation/>
       <Container maxWidth="xl" sx={{p: '0px !important'}}>
-
-        <Navigation/>
+        <CreateClient/>
 
         <Box
             component="form"
@@ -59,9 +59,7 @@ function App() {
         >
           <Container maxWidth="xl">
 
-            <div>
-              <FormControlLabel control={<Switch defaultChecked/>} label="Example switch"/>
-            </div>
+
             <div>
               <LocalizationProvider dateAdapter={AdapterDateFns}>
                 <DatePicker
@@ -75,14 +73,14 @@ function App() {
               </LocalizationProvider>
             </div>
             <div>
-              <Button variant="contained" onClick={handleOpen}>Open modal</Button>
+              <Button variant="contained" onClick={handleOpen} sx={{marginTop: "50px"}} >Open modal</Button>
               <Modal
                   open={open}
                   onClose={handleClose}
                   aria-labelledby="modal-modal-title"
                   aria-describedby="modal-modal-description"
               >
-                <Box sx={modalStyle}>
+                <Box sx={modalStyle} >
                   <Typography id="modal-modal-title" variant="h6" component="h2">
                     Text in a modal
                   </Typography>

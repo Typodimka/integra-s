@@ -36,7 +36,7 @@ export function Navigation() {
                         component="div"
                         sx={{mr: 2, display: {xs: 'none', md: 'flex'}}}
                     >
-                        samara63 ИНТЕГРА-С
+                        КОНСОРЦИУМ ИНТЕГРА-С
                     </Typography>
 
                     <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
