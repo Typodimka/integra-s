@@ -102,7 +102,8 @@ type DataType = {
     };
     [key: string]: string | number | object;
 
-
+    currentSpeedInPercentIN: number;
+    currentSpeedInPercentOUT: number;
 };
 
 
@@ -499,7 +500,8 @@ const CreateClient: React.FC = () => {
                                             <td style={{border: "1px double black"}}>{selectedRow.modal.networkInterfaces.mac}</td>
                                             <td style={{border: "1px double black"}}>{selectedRow.modal.networkInterfaces.ipMask}</td>
                                             <td style={{border: "1px double black"}}>IN - {selectedRow.modal.networkInterfaces.currentSpeedIn} Kb/s
-                                                <br/>OUT - {selectedRow.modal.networkInterfaces.currentSpeedOut} Kb/s </td>
+                                                `{${selectedRow.modal.networkInterfaces.speed}/{selectedRow.modal.networkInterfaces.currentSpeedIn}}
+                                                <br/>OUT - {selectedRow.modal.networkInterfaces.currentSpeedOut} Kb/s %</td>
 
                                         </tr>
                                     </table>
