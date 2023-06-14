@@ -2,8 +2,8 @@ import React from 'react';
 
 import Container from '@mui/material/Container';
 import {Navigation} from "./components/Navigation";
-import CreateClient from "./components/CreateClient"
-import CreateServer from  "./components/CreateServer"
+import TableClient from "./components/TableClient"
+import TableServer from "./components/TableServer"
 
 // const {loading, error, clients }= useClients()
 
@@ -17,11 +17,11 @@ function App() {
   <>
     <Navigation/>
       <Container maxWidth="xl" sx={{p: '0px !important'}}>
-        <CreateClient/>
+        <TableClient/>
 
 
 
-        <CreateServer />
+        <TableServer />
       </Container>
   </>
   );
