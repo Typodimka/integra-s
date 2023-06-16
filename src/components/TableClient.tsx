@@ -13,97 +13,8 @@ import {
     DialogActions,
     Button,
 } from '@material-ui/core';
-import jsonData from '../db/db.json'; // Импортируем файл JSON
-
-type DataType = {
-    name: string;
-    ipAddressServer: string; // Добавлено свойство ipAddressServer
-    user: string;
-    os: string;
-    timeStart: string;
-    version: string;
-    cpuUsage: number;
-    memoryUsage: number;
-    hddUsage: number;
-    modal: {
-        "deviceInformation": {
-            id: number;
-            timeWork: string;
-            timeWorkPo: string;
-            gpsGlonass: string;
-            systemTime: string;
-            configuredCameras: string;
-            noConnected: string;
-            withRemarks: number;
-            connected: number;
-        };
-        unloading: string;
-        software: {
-            recognitionLibrary: string;
-            timeLibrary: string;
-            unloadModule: string;
-            webInterface: string;
-            videoCaptureModule: string;
-        };
-        cpuModule: {
-            "ramSize": {
-                total: number;
-                free: number;
-            };
-            informationCpu: {
-                nameCpu: string;
-                averageLoad1: number;
-                averageLoad2: number;
-                maxKernelLoading1: number;
-                maxKernelLoading2: number;
-                maxStreamLoading1: number;
-                maxStreamLoading2: number;
-                batchTemperature1: number;
-                batchTemperature2: number;
-                consumption1: number;
-                consumption2: number;
-            };
-            informationHdd: {
-                physicalDisk: {
-                    model: string;
-                    series: string;
-                    size: number;
-                    temp: number;
-                };
-                logicalDisk1: {
-                    disk: string;
-                    volume: number;
-                    free: number;
-                    threshold: number | string;
-                };
-                logicalDisk2: {
-                    disk: string;
-                    volume: number;
-                    free: number;
-                    threshold: number | string;
-                };
-                logicalDisk3: {
-                    disk: string;
-                    volume: number;
-                    free: number;
-                    threshold: number | string;
-                };
-            };
-        };
-        networkInterfaces: {
-            name: string;
-            speed: number;
-            mac: string;
-            ipMask: string;
-            currentSpeedIn: number;
-            currentSpeedOut: number;
-        };
-    };
-    [key: string]: string | number | object;
-
-
-};
-
+import {IClient} from "../types/types"
+import {useClients} from '../hooks/api'
 
 
 //Изменение Цвета линии прогрееса
@@ -127,24 +38,15 @@ const getColorByHddUsage = (hddUsage: number): string => {
     }
 };
 
+
+
 const TableClient: React.FC = () => {
+    const {data} = useClients()
 
-    const [data, setData] = useState<DataType[]>(jsonData.clients);
-
-    useEffect(() => {
-        fetch('../db/db.json')
-            .then((response) => response.json())
-            .then((jsonData) => {
-                setData(jsonData.clients);
-            })
-            .catch((error) => {
-                console.error('Error fetching data:', error);
-            });
-    }, []);
 
     const [sortBy, setSortBy] = useState<string | null>(null);
     const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
-    const [selectedRow, setSelectedRow] = useState<DataType | null>(null);
+    const [selectedRow, setSelectedRow] = useState<IClient | null>(null);
 
     const handleSort = (column: string) => {
         if (column === sortBy) {
@@ -155,7 +57,7 @@ const TableClient: React.FC = () => {
         }
     };
 
-    const handleRowClick = (row: DataType) => {
+    const handleRowClick = (row: IClient) => {
         setSelectedRow(row);
     };
 
