@@ -172,6 +172,5 @@ export interface IServer {
     };
     [key: string]: string | number | object;
 
-
 }
 

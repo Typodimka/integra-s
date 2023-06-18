@@ -1,4 +1,4 @@
-import React, { useState, useEffect  } from 'react';
+import React, { useState  } from 'react';
 import {
     Table,
     TableContainer,
@@ -15,32 +15,17 @@ import {
 } from '@material-ui/core';
 import {IClient} from "../types/types"
 import {useClients} from '../hooks/api'
-
+import  getColor  from '../hooks/getColor'
 
 //Изменение Цвета линии прогрееса
-const getColorByCpuUsage = (cpuUsage: number): string => {
-    if (cpuUsage > 80) {
-        return 'FireBrick';
-    } else if (cpuUsage > 50) {
-        return 'Gold';
-    } else {
-        return 'DarkGreen';
-    }
-};
 
-const getColorByHddUsage = (hddUsage: number): string => {
-    if (hddUsage > 80) {
-        return 'FireBrick';
-    } else if (hddUsage > 50) {
-        return 'Gold';
-    } else {
-        return 'DarkGreen';
-    }
-};
+
+
 
 
 
 const TableClient: React.FC = () => {
+
     const {data} = useClients()
 
 
@@ -201,7 +186,7 @@ const TableClient: React.FC = () => {
                                                 width: `${row.cpuUsage}%`,
                                                 height: '100%',
                                                 borderRadius: '5px',
-                                                background: getColorByCpuUsage(row.cpuUsage),
+                                                background: getColor(row.cpuUsage),
                                             }}
                                         />
                                         <div
@@ -240,7 +225,7 @@ const TableClient: React.FC = () => {
                                                 width: `${row.hddUsage}%`,
                                                 height: '100%',
                                                 borderRadius: '10px',
-                                                background: getColorByHddUsage(row.hddUsage),
+                                                background: getColor(row.hddUsage),
                                             }}
                                         />
                                         <div
