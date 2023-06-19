@@ -5,22 +5,13 @@ import {Navigation} from "./components/Navigation";
 import TableClient from "./components/TableClient"
 import TableServer from "./components/TableServer"
 
-// const {loading, error, clients }= useClients()
-
-
-
-
 function App() {
-
 
   return (
   <>
     <Navigation/>
       <Container maxWidth="xl" sx={{p: '0px !important'}}>
         <TableClient/>
-
-
-
         <TableServer />
       </Container>
   </>
