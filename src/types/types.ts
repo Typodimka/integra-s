@@ -1,3 +1,5 @@
+// Определение типогв получаемых данных
+
 export interface IClient {
     name: string;
     ipAddressServer: string; // Добавлено свойство ipAddressServer

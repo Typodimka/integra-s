@@ -15,12 +15,34 @@ import ModalClient from "./Modal/ModalClient";
 
 const TableClient: React.FC = () => {
 
+    // Получение данных с БД
     const {data} = useClients()
 
 
     const [sortBy, setSortBy] = useState<string | null>(null);
     const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
     const [selectedRow, setSelectedRow] = useState<IClient | null>(null);
+
+
+
+    //Функция передачи данных в модальное окно
+    const handleRowClick = (row: IClient) => {
+        setSelectedRow(row);
+    };
+
+    //Функция Закрытия модального окна
+    const handleCloseModal = () => {
+        setSelectedRow(null);
+    };
+
+    // Сортировка столбцов
+    const sortedData = [...data].sort((a, b) => {
+        if (sortBy) {
+            const sortOrder = sortDirection === 'asc' ? 1 : -1;
+            return a[sortBy] > b[sortBy] ? sortOrder : -sortOrder;
+        }
+        return 0;
+    });
 
     const handleSort = (column: string) => {
         if (column === sortBy) {
@@ -30,22 +52,6 @@ const TableClient: React.FC = () => {
             setSortDirection('asc');
         }
     };
-
-    const handleRowClick = (row: IClient) => {
-        setSelectedRow(row);
-    };
-
-    const handleCloseModal = () => {
-        setSelectedRow(null);
-    };
-
-    const sortedData = [...data].sort((a, b) => {
-        if (sortBy) {
-            const sortOrder = sortDirection === 'asc' ? 1 : -1;
-            return a[sortBy] > b[sortBy] ? sortOrder : -sortOrder;
-        }
-        return 0;
-    });
 
 
 

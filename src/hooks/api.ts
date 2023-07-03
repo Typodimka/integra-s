@@ -1,11 +1,11 @@
+//Функции получения данных с БД
+
 import {useEffect, useState} from "react";
 import {IClient, IServer} from "../types/types";
 import jsonData from "../db/db.json";
 
 export function useClients() {
     const [data, setData] = useState<IClient[]>(jsonData.clients);
-    const [loading, setLoading] = useState(false)
-    const [error, setError] = useState('')
 
 
         useEffect(() => {

@@ -21,12 +21,33 @@ import ModalServer from "./Modal/ModalServer";
 
 const TableServer: React.FC = () => {
 
+    //Получения данных с функции БД
     const {data} = useServer()
 
 
     const [sortBy, setSortBy] = useState<string | null>(null);
     const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
     const [selectedRow, setSelectedRow] = useState<IServer | null>(null);
+
+
+    //Функция передачи данных в модальное окно
+    const handleRowClick = (row: IServer) => {
+        setSelectedRow(row);
+    };
+
+    //Фунция закрытия модального окна
+    const handleCloseModal = () => {
+        setSelectedRow(null);
+    };
+
+    //Функия сортировки столбцов
+    const sortedData = [...data].sort((a, b) => {
+        if (sortBy) {
+            const sortOrder = sortDirection === 'asc' ? 1 : -1;
+            return a[sortBy] > b[sortBy] ? sortOrder : -sortOrder;
+        }
+        return 0;
+    });
 
     const handleSort = (column: string) => {
         if (column === sortBy) {
@@ -36,22 +57,6 @@ const TableServer: React.FC = () => {
             setSortDirection('asc');
         }
     };
-
-    const handleRowClick = (row: IServer) => {
-        setSelectedRow(row);
-    };
-
-    const handleCloseModal = () => {
-        setSelectedRow(null);
-    };
-
-    const sortedData = [...data].sort((a, b) => {
-        if (sortBy) {
-            const sortOrder = sortDirection === 'asc' ? 1 : -1;
-            return a[sortBy] > b[sortBy] ? sortOrder : -sortOrder;
-        }
-        return 0;
-    });
 
 
 
