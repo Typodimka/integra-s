@@ -7,15 +7,15 @@ import {
     DialogActions,
     Button,
 } from '@material-ui/core';
-import { IServer } from '../../types/types';
+import { IClient, IServer } from '../../types/types';
 
 
 interface ModalProps {
-    selectedRow: IServer | null;
+    selectedRow: IClient | IServer | null;
     handleCloseModal: () => void;
 }
 
-const ModalServer: React.FC<ModalProps> = ({ selectedRow, handleCloseModal }) => {
+const ModalClient: React.FC<ModalProps> = ({ selectedRow, handleCloseModal }) => {
     if (!selectedRow) {
         return null;
     }
@@ -23,7 +23,7 @@ const ModalServer: React.FC<ModalProps> = ({ selectedRow, handleCloseModal }) =>
     return (
         <Dialog open={true} onClose={handleCloseModal} maxWidth="xl">
             <>
-                <DialogTitle>Событие</DialogTitle>
+                <DialogTitle>Событие {selectedRow.name}</DialogTitle>
                 <DialogContent style={{ minWidth: '1000px' }}>
                     <div style={{display: "flex", justifyContent:"space-between"}}>
                         {/*Левая часть*/}
@@ -178,4 +178,4 @@ const ModalServer: React.FC<ModalProps> = ({ selectedRow, handleCloseModal }) =>
     );
 };
 
-export default ModalServer;
+export default ModalClient;
