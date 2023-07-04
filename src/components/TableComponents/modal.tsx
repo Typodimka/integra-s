@@ -80,7 +80,7 @@ const ModalClient: React.FC<ModalProps> = ({ selectedRow, handleCloseModal }) =>
                                 </div>
                                 <h3>HDD:</h3>
                                 <div style={{border: "1px double black", padding: "5px 5px", justifyContent: "space-between"}}>
-                                    <h4 style={{textAlign:"center"}}>Физические диски:</h4>
+                                    <h4 style={{textAlign:"center", margin: '5px'}}>Физические диски:</h4>
                                     <table style={{ width: "100%" }}>
                                         <tbody>
                                         <tr>
@@ -99,7 +99,7 @@ const ModalClient: React.FC<ModalProps> = ({ selectedRow, handleCloseModal }) =>
                                         </tbody>
                                     </table>
 
-                                    <h4 style={{textAlign:"center"}}>Логические диски:</h4>
+                                    <h4 style={{textAlign:"center", margin: '5px'}}>Логические диски:</h4>
                                     <table style={{ width: "100%" }}>
                                         <tbody>
                                         <tr>
@@ -144,7 +144,7 @@ const ModalClient: React.FC<ModalProps> = ({ selectedRow, handleCloseModal }) =>
                     </div>
 
                     <div>
-                        <h3>Сетевые интерфейсы:</h3>
+                        <h3 style={{marginTop: '-10px'}} >Сетевые интерфейсы:</h3>
                         <table style={{ width: "100%" }}>
                             <tbody>
                             <tr>
