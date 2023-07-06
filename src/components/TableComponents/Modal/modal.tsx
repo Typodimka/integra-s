@@ -7,7 +7,7 @@ import {
     DialogActions,
     Button,
 } from '@material-ui/core';
-import { IClient, IServer } from '../../types/types';
+import { IClient, IServer } from '../../../types/types';
 
 
 interface ModalProps {

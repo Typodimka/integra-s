@@ -1,6 +1,6 @@
 import React from "react";
 import { TableCell, TableRow} from "@material-ui/core";
-import ProgressBar from "../ProgressBar";
+import ProgressBar from "../ProgressBar/ProgressBar";
 import {IServer} from "../../../types/types";
 
 
@@ -17,20 +17,22 @@ const TableRowServer: React.FC<TableRowServerProps> = ({setSelectedRow,  row, in
     };
 
     return(
-        <TableRow key={index} onClick={() => handleRowClick(row)}>
-            <TableCell>{row.name}</TableCell>
-            <TableCell>{row.ipAddressServer}</TableCell>
-            <TableCell>{row.idDeviceUsb}</TableCell>
-            <TableCell>{row.regFile}</TableCell>
-            <TableCell>{row.os}</TableCell>
-            <TableCell>{row.timeStart}</TableCell>
-            <TableCell>{row.version}</TableCell>
-            <TableCell>
+        <TableRow hover role="checkbox"
+                  key={index}
+                  onClick={() => handleRowClick(row)}>
+            <TableCell className="MuiTableCell-sizeMedium">{row.name}</TableCell>
+            <TableCell className="MuiTableCell-sizeMedium">{row.ipAddressServer}</TableCell>
+            <TableCell className="MuiTableCell-sizeMedium">{row.idDeviceUsb}</TableCell>
+            <TableCell className="MuiTableCell-sizeMedium">{row.regFile}</TableCell>
+            <TableCell className="MuiTableCell-sizeMedium">{row.os}</TableCell>
+            <TableCell className="MuiTableCell-sizeMedium">{row.timeStart}</TableCell>
+            <TableCell className="MuiTableCell-sizeMedium">{row.version}</TableCell>
+            <TableCell className="MuiTableCell-sizeMedium">
                 {row.cpuUsage < 100 && <ProgressBar usage={row.cpuUsage} />}
                 {row.cpuUsage>100 && <span>{row.cpuUsage}</span>  }
             </TableCell>
-            <TableCell>{row.memoryUsage}</TableCell>
-            <TableCell>
+            <TableCell className="MuiTableCell-sizeMedium">{row.memoryUsage}</TableCell>
+            <TableCell className="MuiTableCell-sizeMedium">
                 <ProgressBar usage={row.hddUsage} />
             </TableCell>
         </TableRow>

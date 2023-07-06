@@ -10,7 +10,7 @@ interface TableHeaderProps {
 
 const TableHeader: React.FC<TableHeaderProps> = ({ sortBy, sortDirection, handleSort, table }) => {
     return (
-        <TableHead style={{ position: 'sticky', top: 0, zIndex: 1, background: 'white' }}>
+        <TableHead  style={{ position: 'sticky', top: 0, zIndex: 1, background: 'white', height: '50px'}}>
             <TableRow>
                 <TableCell style={{ width: '10%' }}>
                     <TableSortLabel

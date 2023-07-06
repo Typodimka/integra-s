@@ -6,8 +6,8 @@ import {
 } from '@material-ui/core';
 import {IServer} from '../types/types';
 import {useServer} from '../hooks/api'
-import Modal from "./TableComponents/modal";
-import TableHeader from "./TableComponents/TableHeader";
+import Modal from "./TableComponents/Modal/modal";
+import TableHeader from "./TableComponents/TableHeader/TableHeader";
 import TableRowServer from "./TableComponents/TableRow/TableRowServer";
 
 const TableServer: React.FC = () => {
@@ -51,7 +51,7 @@ const TableServer: React.FC = () => {
         <>
             <h3>Статус Серверов</h3>
             <TableContainer style={{ maxHeight: '400px', overflow: 'auto', marginTop:"20px" }}>
-                <Table style={{ border: '1px solid #C0C0C0' }}>
+                <Table stickyHeader aria-label="sticky table" style={{ border: '1px solid #C0C0C0' }}>
                     <TableHeader sortBy={sortBy} sortDirection={sortDirection} handleSort={handleSort} table = {'server'} />
 
                     <TableBody>

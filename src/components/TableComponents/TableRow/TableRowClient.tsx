@@ -1,6 +1,6 @@
 import React from "react";
 import { TableCell, TableRow} from "@material-ui/core";
-import ProgressBar from "../ProgressBar";
+import ProgressBar from "../ProgressBar/ProgressBar";
 import {IClient} from "../../../types/types";
 
 
@@ -18,19 +18,22 @@ const TableRowClient: React.FC<TableRowClientProps> = ({setSelectedRow,  row, in
 
     return(
 
-                <TableRow key={index} onClick={() => handleRowClick(row)}>
-                    <TableCell>{row.name}</TableCell>
-                    <TableCell>{row.ipAddressServer}</TableCell>
-                    <TableCell>{row.user}</TableCell>
-                    <TableCell>{row.os}</TableCell>
-                    <TableCell>{row.timeStart}</TableCell>
-                    <TableCell>{row.version}</TableCell>
-                    <TableCell>
+                <TableRow hover role="checkbox"
+                    key={index}
+                          onClick={() => handleRowClick(row)}
+                         >
+                    <TableCell className="MuiTableCell-sizeSmall">{row.name}</TableCell>
+                    <TableCell className="MuiTableCell-sizeSmall">{row.ipAddressServer}</TableCell>
+                    <TableCell className="MuiTableCell-sizeSmall">{row.user}</TableCell>
+                    <TableCell className="MuiTableCell-sizeSmall">{row.os}</TableCell>
+                    <TableCell className="MuiTableCell-sizeSmall">{row.timeStart}</TableCell>
+                    <TableCell className="MuiTableCell-sizeSmall">{row.version}</TableCell>
+                    <TableCell className="MuiTableCell-sizeSmall">
                         { row.cpuUsage<100 && <ProgressBar usage={row.cpuUsage}/>}
                         {row.cpuUsage>100 && <span>{row.cpuUsage}</span>  }
-                    </TableCell>
-                    <TableCell>{row.memoryUsage}</TableCell>
-                    <TableCell>
+                    </TableCell >
+                    <TableCell className="MuiTableCell-sizeSmall">{row.memoryUsage}</TableCell>
+                    <TableCell className="MuiTableCell-sizeSmall">
                         <ProgressBar usage={row.hddUsage}/>
                     </TableCell>
 
