@@ -1,6 +1,5 @@
 import React from 'react';
 import { TableHead, TableRow, TableCell, TableSortLabel } from '@material-ui/core';
-import './_table_header.scss'
 
 interface TableHeaderProps {
     sortBy: string | null;
