@@ -1,8 +1,8 @@
-// Определение типогв получаемых данных
+// Определение типог получаемых данных
 
 export interface IClient {
     name: string;
-    ipAddressServer: string; // Добавлено свойство ipAddressServer
+    ipAddressServer: string;
     user: string;
     os: string;
     timeStart: string;
@@ -89,7 +89,7 @@ export interface IClient {
 
 export interface IServer {
     name: string;
-    ipAddressServer: string; // Добавлено свойство ipAddressServer
+    ipAddressServer: string;
     idDeviceUsb: number;
     regFile: string;
     os: string;

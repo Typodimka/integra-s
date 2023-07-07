@@ -1,6 +1,7 @@
 import React from "react";
 import getColor from "../../../hooks/getColor";
-import "./_progress_bar.scss";
+import "./_progress_bar.scss"
+
 interface ProgressBarProps {
   usage: number;
 }

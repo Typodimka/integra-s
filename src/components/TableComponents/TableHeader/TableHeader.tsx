@@ -1,5 +1,6 @@
 import React from 'react';
 import { TableHead, TableRow, TableCell, TableSortLabel } from '@material-ui/core';
+import './_table_header.scss'
 
 interface TableHeaderProps {
     sortBy: string | null;
@@ -10,9 +11,9 @@ interface TableHeaderProps {
 
 const TableHeader: React.FC<TableHeaderProps> = ({ sortBy, sortDirection, handleSort, table }) => {
     return (
-        <TableHead  style={{ position: 'sticky', top: 0, zIndex: 1, background: 'white', height: '50px'}}>
+        <TableHead style={{height: '10px'}}>
             <TableRow>
-                <TableCell style={{ width: '10%' }}>
+                <TableCell style={{ width: '10%' }} >
                     <TableSortLabel
                         active={sortBy === 'name'}
                         direction={sortDirection}
@@ -51,7 +52,7 @@ const TableHeader: React.FC<TableHeaderProps> = ({ sortBy, sortDirection, handle
                         direction={sortDirection}
                         onClick={() => handleSort('idDeviceUsb')}
                     >
-                        Ид. устройства USB
+                        Ид.устройства USB
                     </TableSortLabel>
                 </TableCell>
                 }

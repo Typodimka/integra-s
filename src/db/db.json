@@ -2,7 +2,7 @@
   "servers": [
     {
     "name": "DVR-0074",
-    "ipAddressServer": "192-168-40-107",
+    "ipAddressServer": "192.168.40.107",
     "idDeviceUsb": 4819,
     "regFile": "Да",
     "os": "Astra Linux 1.7 x86-64",
@@ -97,7 +97,7 @@
 
     {
       "name": "DVR-16341",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "idDeviceUsb": 4819,
       "regFile": "Да",
       "os": "Astra Linux 1.7 x86-64",
@@ -199,7 +199,7 @@
 
     {
       "name": "DVR-16341",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "idDeviceUsb": 4819,
       "regFile": "Да",
       "os": "Astra Linux 1.7 x86-64",
@@ -301,7 +301,7 @@
 
     {
       "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "idDeviceUsb": 4819,
       "regFile": "Да",
       "os": "Astra Linux 1.7 x86-64",
@@ -396,7 +396,7 @@
 
     {
       "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "idDeviceUsb": 4819,
       "regFile": "Да",
       "os": "Astra Linux 1.7 x86-64",
@@ -491,7 +491,7 @@
 
     {
       "name": "DVR-16341",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "idDeviceUsb": 4819,
       "regFile": "Да",
       "os": "Astra Linux 1.7 x86-64",
@@ -593,7 +593,7 @@
 
     {
       "name": "DVR-16341",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "idDeviceUsb": 4819,
       "regFile": "Да",
       "os": "Astra Linux 1.7 x86-64",
@@ -695,7 +695,7 @@
 
     {
       "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "idDeviceUsb": 4819,
       "regFile": "Да",
       "os": "Astra Linux 1.7 x86-64",
@@ -790,7 +790,7 @@
 
     {
       "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "idDeviceUsb": 4819,
       "regFile": "Да",
       "os": "Astra Linux 1.7 x86-64",
@@ -885,7 +885,7 @@
 
     {
       "name": "DVR-16341",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "idDeviceUsb": 4819,
       "regFile": "Да",
       "os": "Astra Linux 1.7 x86-64",
@@ -987,7 +987,7 @@
 
     {
       "name": "DVR-16341",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "idDeviceUsb": 4819,
       "regFile": "Да",
       "os": "Astra Linux 1.7 x86-64",
@@ -1089,7 +1089,7 @@
 
     {
       "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "idDeviceUsb": 4819,
       "regFile": "Да",
       "os": "Astra Linux 1.7 x86-64",
@@ -1184,7 +1184,7 @@
 
     {
       "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "idDeviceUsb": 4819,
       "regFile": "Да",
       "os": "Astra Linux 1.7 x86-64",
@@ -1279,401 +1279,7 @@
 
     {
       "name": "DVR-16341",
-      "ipAddressServer": "192-168-40-107",
-      "idDeviceUsb": 4819,
-      "regFile": "Да",
-      "os": "Astra Linux 1.7 x86-64",
-      "timeStart": "2021-11-03 16:28:13,962",
-      "version": "7.0.798",
-      "cpuUsage": 867,
-      "memoryUsage": 18216,
-      "hddUsage": 80,
-      "modal":
-      {
-        "deviceInformation": {
-          "id": 10152,
-          "timeWork": "46 day 22:29:55 time",
-          "timeWorkPo": "01 day 04:24:19:323 time reset [1, 8]",
-          "gpsGlonass": "не подключено",
-          "systemTime": "Синхронно",
-          "configuredCameras": "4 из 24 (4 из 4)",
-          "noConnected": "0/4",
-          "withRemarks": 0,
-          "connected": 4
-        },
-
-        "unloading": "Приостановлена",
-        "software": {
-          "recognitionLibrary": "5.0.6",
-          "timeLibrary": "2.24.0.0",
-          "unloadModule": "IS: 2.10.2 2022/06/23, I2X: 3.1.1 2022/06/23, IS: 2.0.5 2022/06/01",
-          "webInterface": "----",
-          "videoCaptureModule": "IKDD: 2.1.22 2023/02/08"
-        },
-
-        "cpuModule":
-        {
-
-          "ramSize":
-          {
-            "total": 15681,
-            "free": 3776
-          },
-
-          "informationCpu": {
-            "nameCpu": "Intel(R) Xeon(R) Silver 4210 CPU @ 2.20GHz (x2)",
-            "averageLoad1": 30.73,
-            "averageLoad2": 30.83,
-            "maxKernelLoading1": 44.90,
-            "maxKernelLoading2": 44.88,
-            "maxStreamLoading1": 50.00,
-            "maxStreamLoading2": 52.00,
-            "batchTemperature1": 38.00,
-            "batchTemperature2": 40.00,
-            "consumption1": 38.42,
-            "consumption2": 37.24
-          },
-
-          "informationHdd": {
-            "physicalDisk": {
-              "model": "ST3320418AS",
-              "series": "WP00l0JR",
-              "size": 9314,
-              "temp": 27
-            },
-            "logicalDisk1": {
-              "disk": "/",
-              "volume": 452131,
-              "free": 510,
-              "threshold": 10240
-            },
-
-            "logicalDisk2": {
-              "disk": "/boot/efi",
-              "volume": 510,
-              "free": 510,
-              "threshold": "-"
-            },
-
-            "logicalDisk3": {
-              "disk": "/mnt/sda",
-              "volume": 9461311,
-              "free": 1267750,
-              "threshold": "-"
-            }
-
-
-          }
-        },
-        "networkInterfaces": {
-          "name": "eth0",
-          "speed": 1000,
-          "mac": "3c:ec:ef:8a:52:22",
-          "ipMask": "172.16.2.209 - 255.255.255.0",
-          "currentSpeedIn": 31659,
-          "currentSpeedOut": 812
-        }
-
-      }
-
-
-    },
-
-    {
-      "name": "DVR-16341",
-      "ipAddressServer": "192-168-40-107",
-      "idDeviceUsb": 4819,
-      "regFile": "Да",
-      "os": "Astra Linux 1.7 x86-64",
-      "timeStart": "2021-11-03 16:28:13,962",
-      "version": "7.0.798",
-      "cpuUsage": 867,
-      "memoryUsage": 18216,
-      "hddUsage": 80,
-      "modal":
-      {
-        "deviceInformation": {
-          "id": 10152,
-          "timeWork": "46 day 22:29:55 time",
-          "timeWorkPo": "01 day 04:24:19:323 time reset [1, 8]",
-          "gpsGlonass": "не подключено",
-          "systemTime": "Синхронно",
-          "configuredCameras": "4 из 24 (4 из 4)",
-          "noConnected": "0/4",
-          "withRemarks": 0,
-          "connected": 4
-        },
-
-        "unloading": "Приостановлена",
-        "software": {
-          "recognitionLibrary": "5.0.6",
-          "timeLibrary": "2.24.0.0",
-          "unloadModule": "IS: 2.10.2 2022/06/23, I2X: 3.1.1 2022/06/23, IS: 2.0.5 2022/06/01",
-          "webInterface": "----",
-          "videoCaptureModule": "IKDD: 2.1.22 2023/02/08"
-        },
-
-        "cpuModule":
-        {
-
-          "ramSize":
-          {
-            "total": 15681,
-            "free": 3776
-          },
-
-          "informationCpu": {
-            "nameCpu": "Intel(R) Xeon(R) Silver 4210 CPU @ 2.20GHz (x2)",
-            "averageLoad1": 30.73,
-            "averageLoad2": 30.83,
-            "maxKernelLoading1": 44.90,
-            "maxKernelLoading2": 44.88,
-            "maxStreamLoading1": 50.00,
-            "maxStreamLoading2": 52.00,
-            "batchTemperature1": 38.00,
-            "batchTemperature2": 40.00,
-            "consumption1": 38.42,
-            "consumption2": 37.24
-          },
-
-          "informationHdd": {
-            "physicalDisk": {
-              "model": "ST3320418AS",
-              "series": "WP00l0JR",
-              "size": 9314,
-              "temp": 27
-            },
-            "logicalDisk1": {
-              "disk": "/",
-              "volume": 452131,
-              "free": 510,
-              "threshold": 10240
-            },
-
-            "logicalDisk2": {
-              "disk": "/boot/efi",
-              "volume": 510,
-              "free": 510,
-              "threshold": "-"
-            },
-
-            "logicalDisk3": {
-              "disk": "/mnt/sda",
-              "volume": 9461311,
-              "free": 1267750,
-              "threshold": "-"
-            }
-
-
-          }
-        },
-        "networkInterfaces": {
-          "name": "eth0",
-          "speed": 1000,
-          "mac": "3c:ec:ef:8a:52:22",
-          "ipMask": "172.16.2.209 - 255.255.255.0",
-          "currentSpeedIn": 31659,
-          "currentSpeedOut": 812
-        }
-
-      }
-
-
-    },
-
-    {
-      "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
-      "idDeviceUsb": 4819,
-      "regFile": "Да",
-      "os": "Astra Linux 1.7 x86-64",
-      "timeStart": "2021-11-03 16:28:13,962",
-      "version": "7.0.798",
-      "cpuUsage": 867,
-      "memoryUsage": 18216,
-      "hddUsage": 43,
-      "modal":
-      {
-        "deviceInformation": {
-          "id": 10152,
-          "timeWork": "46 day 22:29:55 time",
-          "timeWorkPo": "01 day 04:24:19:323 time reset [1, 8]",
-          "gpsGlonass": "не подключено",
-          "systemTime": "Синхронно",
-          "configuredCameras": "4 из 24 (4 из 4)",
-          "noConnected": "0/4",
-          "withRemarks": 0,
-          "connected": 4
-        },
-
-        "unloading": "Приостановлена",
-        "software": {
-          "recognitionLibrary": "5.0.6",
-          "timeLibrary": "2.24.0.0",
-          "unloadModule": "IS: 2.10.2 2022/06/23, I2X: 3.1.1 2022/06/23, IS: 2.0.5 2022/06/01",
-          "webInterface": "----",
-          "videoCaptureModule": "IKDD: 2.1.22 2023/02/08"
-        },
-
-        "cpuModule":
-        {
-
-          "ramSize":
-          {
-            "total": 15681,
-            "free": 3776
-          },
-
-          "informationCpu": {
-            "nameCpu": "Intel(R) Xeon(R) Silver 4210 CPU @ 2.20GHz (x2)",
-            "averageLoad1": 30.73,
-            "averageLoad2": 30.83,
-            "maxKernelLoading1": 44.90,
-            "maxKernelLoading2": 44.88,
-            "maxStreamLoading1": 50.00,
-            "maxStreamLoading2": 52.00,
-            "batchTemperature1": 38.00,
-            "batchTemperature2": 40.00,
-            "consumption1": 38.42,
-            "consumption2": 37.24
-          },
-
-          "informationHdd": {
-            "physicalDisk": {
-              "model": "ST3320418AS",
-              "series": "WP00l0JR",
-              "size": 9314,
-              "temp": 27
-            },
-            "logicalDisk1": {
-              "disk": "/",
-              "volume": 452131,
-              "free": 510,
-              "threshold": 10240
-            },
-            "logicalDisk2": {
-              "disk": "/boot/efi",
-              "volume": 510,
-              "free": 510,
-              "threshold": "-"
-            },
-            "logicalDisk3": {
-              "disk": "/mnt/sda",
-              "volume": 9461311,
-              "free": 1267750,
-              "threshold": "-"
-            }
-          }
-        },
-        "networkInterfaces": {
-          "name": "eth0",
-          "speed": 1000,
-          "mac": "3c:ec:ef:8a:52:22",
-          "ipMask": "172.16.2.209 - 255.255.255.0",
-          "currentSpeedIn": 31659,
-          "currentSpeedOut": 812
-        }
-      }
-    },
-
-    {
-      "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
-      "idDeviceUsb": 4819,
-      "regFile": "Да",
-      "os": "Astra Linux 1.7 x86-64",
-      "timeStart": "2021-11-03 16:28:13,962",
-      "version": "7.0.798",
-      "cpuUsage": 867,
-      "memoryUsage": 18216,
-      "hddUsage": 43,
-      "modal":
-      {
-        "deviceInformation": {
-          "id": 10152,
-          "timeWork": "46 day 22:29:55 time",
-          "timeWorkPo": "01 day 04:24:19:323 time reset [1, 8]",
-          "gpsGlonass": "не подключено",
-          "systemTime": "Синхронно",
-          "configuredCameras": "4 из 24 (4 из 4)",
-          "noConnected": "0/4",
-          "withRemarks": 0,
-          "connected": 4
-        },
-
-        "unloading": "Приостановлена",
-        "software": {
-          "recognitionLibrary": "5.0.6",
-          "timeLibrary": "2.24.0.0",
-          "unloadModule": "IS: 2.10.2 2022/06/23, I2X: 3.1.1 2022/06/23, IS: 2.0.5 2022/06/01",
-          "webInterface": "----",
-          "videoCaptureModule": "IKDD: 2.1.22 2023/02/08"
-        },
-
-        "cpuModule":
-        {
-
-          "ramSize":
-          {
-            "total": 15681,
-            "free": 3776
-          },
-
-          "informationCpu": {
-            "nameCpu": "Intel(R) Xeon(R) Silver 4210 CPU @ 2.20GHz (x2)",
-            "averageLoad1": 30.73,
-            "averageLoad2": 30.83,
-            "maxKernelLoading1": 44.90,
-            "maxKernelLoading2": 44.88,
-            "maxStreamLoading1": 50.00,
-            "maxStreamLoading2": 52.00,
-            "batchTemperature1": 38.00,
-            "batchTemperature2": 40.00,
-            "consumption1": 38.42,
-            "consumption2": 37.24
-          },
-
-          "informationHdd": {
-            "physicalDisk": {
-              "model": "ST3320418AS",
-              "series": "WP00l0JR",
-              "size": 9314,
-              "temp": 27
-            },
-            "logicalDisk1": {
-              "disk": "/",
-              "volume": 452131,
-              "free": 510,
-              "threshold": 10240
-            },
-            "logicalDisk2": {
-              "disk": "/boot/efi",
-              "volume": 510,
-              "free": 510,
-              "threshold": "-"
-            },
-            "logicalDisk3": {
-              "disk": "/mnt/sda",
-              "volume": 9461311,
-              "free": 1267750,
-              "threshold": "-"
-            }
-          }
-        },
-        "networkInterfaces": {
-          "name": "eth0",
-          "speed": 1000,
-          "mac": "3c:ec:ef:8a:52:22",
-          "ipMask": "172.16.2.209 - 255.255.255.0",
-          "currentSpeedIn": 31659,
-          "currentSpeedOut": 812
-        }
-      }
-    },
-
-    {
-      "name": "DVR-16341",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "idDeviceUsb": 4819,
       "regFile": "Да",
       "os": "Astra Linux 1.7 x86-64",
@@ -1775,7 +1381,7 @@
 
     {
       "name": "DVR-16341",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "idDeviceUsb": 4819,
       "regFile": "Да",
       "os": "Astra Linux 1.7 x86-64",
@@ -1877,7 +1483,401 @@
 
     {
       "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
+      "idDeviceUsb": 4819,
+      "regFile": "Да",
+      "os": "Astra Linux 1.7 x86-64",
+      "timeStart": "2021-11-03 16:28:13,962",
+      "version": "7.0.798",
+      "cpuUsage": 867,
+      "memoryUsage": 18216,
+      "hddUsage": 43,
+      "modal":
+      {
+        "deviceInformation": {
+          "id": 10152,
+          "timeWork": "46 day 22:29:55 time",
+          "timeWorkPo": "01 day 04:24:19:323 time reset [1, 8]",
+          "gpsGlonass": "не подключено",
+          "systemTime": "Синхронно",
+          "configuredCameras": "4 из 24 (4 из 4)",
+          "noConnected": "0/4",
+          "withRemarks": 0,
+          "connected": 4
+        },
+
+        "unloading": "Приостановлена",
+        "software": {
+          "recognitionLibrary": "5.0.6",
+          "timeLibrary": "2.24.0.0",
+          "unloadModule": "IS: 2.10.2 2022/06/23, I2X: 3.1.1 2022/06/23, IS: 2.0.5 2022/06/01",
+          "webInterface": "----",
+          "videoCaptureModule": "IKDD: 2.1.22 2023/02/08"
+        },
+
+        "cpuModule":
+        {
+
+          "ramSize":
+          {
+            "total": 15681,
+            "free": 3776
+          },
+
+          "informationCpu": {
+            "nameCpu": "Intel(R) Xeon(R) Silver 4210 CPU @ 2.20GHz (x2)",
+            "averageLoad1": 30.73,
+            "averageLoad2": 30.83,
+            "maxKernelLoading1": 44.90,
+            "maxKernelLoading2": 44.88,
+            "maxStreamLoading1": 50.00,
+            "maxStreamLoading2": 52.00,
+            "batchTemperature1": 38.00,
+            "batchTemperature2": 40.00,
+            "consumption1": 38.42,
+            "consumption2": 37.24
+          },
+
+          "informationHdd": {
+            "physicalDisk": {
+              "model": "ST3320418AS",
+              "series": "WP00l0JR",
+              "size": 9314,
+              "temp": 27
+            },
+            "logicalDisk1": {
+              "disk": "/",
+              "volume": 452131,
+              "free": 510,
+              "threshold": 10240
+            },
+            "logicalDisk2": {
+              "disk": "/boot/efi",
+              "volume": 510,
+              "free": 510,
+              "threshold": "-"
+            },
+            "logicalDisk3": {
+              "disk": "/mnt/sda",
+              "volume": 9461311,
+              "free": 1267750,
+              "threshold": "-"
+            }
+          }
+        },
+        "networkInterfaces": {
+          "name": "eth0",
+          "speed": 1000,
+          "mac": "3c:ec:ef:8a:52:22",
+          "ipMask": "172.16.2.209 - 255.255.255.0",
+          "currentSpeedIn": 31659,
+          "currentSpeedOut": 812
+        }
+      }
+    },
+
+    {
+      "name": "DVR-0074",
+      "ipAddressServer": "192.168.40.107",
+      "idDeviceUsb": 4819,
+      "regFile": "Да",
+      "os": "Astra Linux 1.7 x86-64",
+      "timeStart": "2021-11-03 16:28:13,962",
+      "version": "7.0.798",
+      "cpuUsage": 867,
+      "memoryUsage": 18216,
+      "hddUsage": 43,
+      "modal":
+      {
+        "deviceInformation": {
+          "id": 10152,
+          "timeWork": "46 day 22:29:55 time",
+          "timeWorkPo": "01 day 04:24:19:323 time reset [1, 8]",
+          "gpsGlonass": "не подключено",
+          "systemTime": "Синхронно",
+          "configuredCameras": "4 из 24 (4 из 4)",
+          "noConnected": "0/4",
+          "withRemarks": 0,
+          "connected": 4
+        },
+
+        "unloading": "Приостановлена",
+        "software": {
+          "recognitionLibrary": "5.0.6",
+          "timeLibrary": "2.24.0.0",
+          "unloadModule": "IS: 2.10.2 2022/06/23, I2X: 3.1.1 2022/06/23, IS: 2.0.5 2022/06/01",
+          "webInterface": "----",
+          "videoCaptureModule": "IKDD: 2.1.22 2023/02/08"
+        },
+
+        "cpuModule":
+        {
+
+          "ramSize":
+          {
+            "total": 15681,
+            "free": 3776
+          },
+
+          "informationCpu": {
+            "nameCpu": "Intel(R) Xeon(R) Silver 4210 CPU @ 2.20GHz (x2)",
+            "averageLoad1": 30.73,
+            "averageLoad2": 30.83,
+            "maxKernelLoading1": 44.90,
+            "maxKernelLoading2": 44.88,
+            "maxStreamLoading1": 50.00,
+            "maxStreamLoading2": 52.00,
+            "batchTemperature1": 38.00,
+            "batchTemperature2": 40.00,
+            "consumption1": 38.42,
+            "consumption2": 37.24
+          },
+
+          "informationHdd": {
+            "physicalDisk": {
+              "model": "ST3320418AS",
+              "series": "WP00l0JR",
+              "size": 9314,
+              "temp": 27
+            },
+            "logicalDisk1": {
+              "disk": "/",
+              "volume": 452131,
+              "free": 510,
+              "threshold": 10240
+            },
+            "logicalDisk2": {
+              "disk": "/boot/efi",
+              "volume": 510,
+              "free": 510,
+              "threshold": "-"
+            },
+            "logicalDisk3": {
+              "disk": "/mnt/sda",
+              "volume": 9461311,
+              "free": 1267750,
+              "threshold": "-"
+            }
+          }
+        },
+        "networkInterfaces": {
+          "name": "eth0",
+          "speed": 1000,
+          "mac": "3c:ec:ef:8a:52:22",
+          "ipMask": "172.16.2.209 - 255.255.255.0",
+          "currentSpeedIn": 31659,
+          "currentSpeedOut": 812
+        }
+      }
+    },
+
+    {
+      "name": "DVR-16341",
+      "ipAddressServer": "192.168.40.107",
+      "idDeviceUsb": 4819,
+      "regFile": "Да",
+      "os": "Astra Linux 1.7 x86-64",
+      "timeStart": "2021-11-03 16:28:13,962",
+      "version": "7.0.798",
+      "cpuUsage": 867,
+      "memoryUsage": 18216,
+      "hddUsage": 80,
+      "modal":
+      {
+        "deviceInformation": {
+          "id": 10152,
+          "timeWork": "46 day 22:29:55 time",
+          "timeWorkPo": "01 day 04:24:19:323 time reset [1, 8]",
+          "gpsGlonass": "не подключено",
+          "systemTime": "Синхронно",
+          "configuredCameras": "4 из 24 (4 из 4)",
+          "noConnected": "0/4",
+          "withRemarks": 0,
+          "connected": 4
+        },
+
+        "unloading": "Приостановлена",
+        "software": {
+          "recognitionLibrary": "5.0.6",
+          "timeLibrary": "2.24.0.0",
+          "unloadModule": "IS: 2.10.2 2022/06/23, I2X: 3.1.1 2022/06/23, IS: 2.0.5 2022/06/01",
+          "webInterface": "----",
+          "videoCaptureModule": "IKDD: 2.1.22 2023/02/08"
+        },
+
+        "cpuModule":
+        {
+
+          "ramSize":
+          {
+            "total": 15681,
+            "free": 3776
+          },
+
+          "informationCpu": {
+            "nameCpu": "Intel(R) Xeon(R) Silver 4210 CPU @ 2.20GHz (x2)",
+            "averageLoad1": 30.73,
+            "averageLoad2": 30.83,
+            "maxKernelLoading1": 44.90,
+            "maxKernelLoading2": 44.88,
+            "maxStreamLoading1": 50.00,
+            "maxStreamLoading2": 52.00,
+            "batchTemperature1": 38.00,
+            "batchTemperature2": 40.00,
+            "consumption1": 38.42,
+            "consumption2": 37.24
+          },
+
+          "informationHdd": {
+            "physicalDisk": {
+              "model": "ST3320418AS",
+              "series": "WP00l0JR",
+              "size": 9314,
+              "temp": 27
+            },
+            "logicalDisk1": {
+              "disk": "/",
+              "volume": 452131,
+              "free": 510,
+              "threshold": 10240
+            },
+
+            "logicalDisk2": {
+              "disk": "/boot/efi",
+              "volume": 510,
+              "free": 510,
+              "threshold": "-"
+            },
+
+            "logicalDisk3": {
+              "disk": "/mnt/sda",
+              "volume": 9461311,
+              "free": 1267750,
+              "threshold": "-"
+            }
+
+
+          }
+        },
+        "networkInterfaces": {
+          "name": "eth0",
+          "speed": 1000,
+          "mac": "3c:ec:ef:8a:52:22",
+          "ipMask": "172.16.2.209 - 255.255.255.0",
+          "currentSpeedIn": 31659,
+          "currentSpeedOut": 812
+        }
+
+      }
+
+
+    },
+
+    {
+      "name": "DVR-16341",
+      "ipAddressServer": "192.168.40.107",
+      "idDeviceUsb": 4819,
+      "regFile": "Да",
+      "os": "Astra Linux 1.7 x86-64",
+      "timeStart": "2021-11-03 16:28:13,962",
+      "version": "7.0.798",
+      "cpuUsage": 867,
+      "memoryUsage": 18216,
+      "hddUsage": 80,
+      "modal":
+      {
+        "deviceInformation": {
+          "id": 10152,
+          "timeWork": "46 day 22:29:55 time",
+          "timeWorkPo": "01 day 04:24:19:323 time reset [1, 8]",
+          "gpsGlonass": "не подключено",
+          "systemTime": "Синхронно",
+          "configuredCameras": "4 из 24 (4 из 4)",
+          "noConnected": "0/4",
+          "withRemarks": 0,
+          "connected": 4
+        },
+
+        "unloading": "Приостановлена",
+        "software": {
+          "recognitionLibrary": "5.0.6",
+          "timeLibrary": "2.24.0.0",
+          "unloadModule": "IS: 2.10.2 2022/06/23, I2X: 3.1.1 2022/06/23, IS: 2.0.5 2022/06/01",
+          "webInterface": "----",
+          "videoCaptureModule": "IKDD: 2.1.22 2023/02/08"
+        },
+
+        "cpuModule":
+        {
+
+          "ramSize":
+          {
+            "total": 15681,
+            "free": 3776
+          },
+
+          "informationCpu": {
+            "nameCpu": "Intel(R) Xeon(R) Silver 4210 CPU @ 2.20GHz (x2)",
+            "averageLoad1": 30.73,
+            "averageLoad2": 30.83,
+            "maxKernelLoading1": 44.90,
+            "maxKernelLoading2": 44.88,
+            "maxStreamLoading1": 50.00,
+            "maxStreamLoading2": 52.00,
+            "batchTemperature1": 38.00,
+            "batchTemperature2": 40.00,
+            "consumption1": 38.42,
+            "consumption2": 37.24
+          },
+
+          "informationHdd": {
+            "physicalDisk": {
+              "model": "ST3320418AS",
+              "series": "WP00l0JR",
+              "size": 9314,
+              "temp": 27
+            },
+            "logicalDisk1": {
+              "disk": "/",
+              "volume": 452131,
+              "free": 510,
+              "threshold": 10240
+            },
+
+            "logicalDisk2": {
+              "disk": "/boot/efi",
+              "volume": 510,
+              "free": 510,
+              "threshold": "-"
+            },
+
+            "logicalDisk3": {
+              "disk": "/mnt/sda",
+              "volume": 9461311,
+              "free": 1267750,
+              "threshold": "-"
+            }
+
+
+          }
+        },
+        "networkInterfaces": {
+          "name": "eth0",
+          "speed": 1000,
+          "mac": "3c:ec:ef:8a:52:22",
+          "ipMask": "172.16.2.209 - 255.255.255.0",
+          "currentSpeedIn": 31659,
+          "currentSpeedOut": 812
+        }
+
+      }
+
+
+    },
+
+    {
+      "name": "DVR-0074",
+      "ipAddressServer": "192.168.40.107",
       "idDeviceUsb": 4819,
       "regFile": "Да",
       "os": "Astra Linux 1.7 x86-64",
@@ -1977,7 +1977,7 @@
   [
     {
       "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -2078,7 +2078,7 @@
 
     {
       "name": "DVR-163141",
-      "ipAddressServer": "192-168-40-101",
+      "ipAddressServer": "192.168.40.101",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -2179,7 +2179,7 @@
 
     {
       "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -2280,7 +2280,7 @@
 
     {
       "name": "DVR-163141",
-      "ipAddressServer": "192-168-40-101",
+      "ipAddressServer": "192.168.40.101",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -2381,7 +2381,7 @@
 
     {
       "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -2482,7 +2482,7 @@
 
     {
       "name": "DVR-163141",
-      "ipAddressServer": "192-168-40-101",
+      "ipAddressServer": "192.168.40.101",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -2583,7 +2583,7 @@
 
     {
       "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -2684,7 +2684,7 @@
 
     {
       "name": "DVR-163141",
-      "ipAddressServer": "192-168-40-101",
+      "ipAddressServer": "192.168.40.101",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -2785,7 +2785,7 @@
 
     {
       "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -2886,7 +2886,7 @@
 
     {
       "name": "DVR-163141",
-      "ipAddressServer": "192-168-40-101",
+      "ipAddressServer": "192.168.40.101",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -2987,7 +2987,7 @@
 
     {
       "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -3088,7 +3088,7 @@
 
     {
       "name": "DVR-163141",
-      "ipAddressServer": "192-168-40-101",
+      "ipAddressServer": "192.168.40.101",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -3189,7 +3189,7 @@
 
     {
       "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -3290,7 +3290,7 @@
 
     {
       "name": "DVR-163141",
-      "ipAddressServer": "192-168-40-101",
+      "ipAddressServer": "192.168.40.101",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -3391,7 +3391,7 @@
 
     {
       "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -3492,7 +3492,7 @@
 
     {
       "name": "DVR-163141",
-      "ipAddressServer": "192-168-40-101",
+      "ipAddressServer": "192.168.40.101",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -3593,7 +3593,7 @@
 
     {
       "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -3694,7 +3694,7 @@
 
     {
       "name": "DVR-163141",
-      "ipAddressServer": "192-168-40-101",
+      "ipAddressServer": "192.168.40.101",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -3795,7 +3795,7 @@
 
     {
       "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -3896,7 +3896,7 @@
 
     {
       "name": "DVR-163141",
-      "ipAddressServer": "192-168-40-101",
+      "ipAddressServer": "192.168.40.101",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -3997,7 +3997,7 @@
 
     {
       "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -4098,7 +4098,7 @@
 
     {
       "name": "DVR-163141",
-      "ipAddressServer": "192-168-40-101",
+      "ipAddressServer": "192.168.40.101",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -4199,7 +4199,7 @@
 
     {
       "name": "DVR-0074",
-      "ipAddressServer": "192-168-40-107",
+      "ipAddressServer": "192.168.40.107",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",
@@ -4300,7 +4300,7 @@
 
     {
       "name": "DVR-163141",
-      "ipAddressServer": "192-168-40-101",
+      "ipAddressServer": "192.168.40.101",
       "user": "Guest",
       "os": "Astra Linux 1.7 x86-64",
       "timeStart": "2021-11-03 16:28:13,962",

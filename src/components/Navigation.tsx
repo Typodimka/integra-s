@@ -8,7 +8,7 @@ import AppBar from "@mui/material/AppBar";
 export function Navigation() {
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" style={{height: '60px'}}>
         <Toolbar disableGutters>
           <Typography
             variant="h6"

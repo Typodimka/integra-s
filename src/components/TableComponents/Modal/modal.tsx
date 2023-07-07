@@ -8,7 +8,7 @@ import {
     Button,
 } from '@material-ui/core';
 import { IClient, IServer } from '../../../types/types';
-
+import "./_modal.scss"
 
 interface ModalProps {
     selectedRow: IClient | IServer | null;
@@ -81,7 +81,7 @@ const ModalClient: React.FC<ModalProps> = ({ selectedRow, handleCloseModal }) =>
                                 <h3>HDD:</h3>
                                 <div style={{border: "1px double black", padding: "5px 5px", justifyContent: "space-between"}}>
                                     <h4 style={{textAlign:"center", margin: '5px'}}>Физические диски:</h4>
-                                    <table style={{ width: "100%" }}>
+                                    <table className={'table_modal'}>
                                         <tbody>
                                         <tr>
                                             <th>Модель</th>
@@ -91,16 +91,16 @@ const ModalClient: React.FC<ModalProps> = ({ selectedRow, handleCloseModal }) =>
                                         </tr>
 
                                         <tr>
-                                            <td style={{border: "1px double black"}}>{selectedRow.modal.cpuModule.informationHdd.physicalDisk.model}</td>
-                                            <td style={{border: "1px double black"}}>{selectedRow.modal.cpuModule.informationHdd.physicalDisk.series}</td>
-                                            <td style={{border: "1px double black"}}>{selectedRow.modal.cpuModule.informationHdd.physicalDisk.size}</td>
-                                            <td style={{border: "1px double black"}}>{selectedRow.modal.cpuModule.informationHdd.physicalDisk.temp}</td>
+                                            <td >{selectedRow.modal.cpuModule.informationHdd.physicalDisk.model}</td>
+                                            <td >{selectedRow.modal.cpuModule.informationHdd.physicalDisk.series}</td>
+                                            <td >{selectedRow.modal.cpuModule.informationHdd.physicalDisk.size}</td>
+                                            <td >{selectedRow.modal.cpuModule.informationHdd.physicalDisk.temp}</td>
                                         </tr>
                                         </tbody>
                                     </table>
 
                                     <h4 style={{textAlign:"center", margin: '5px'}}>Логические диски:</h4>
-                                    <table style={{ width: "100%" }}>
+                                    <table className={'table_modal'}>
                                         <tbody>
                                         <tr>
                                             <th>Диск</th>
@@ -110,24 +110,24 @@ const ModalClient: React.FC<ModalProps> = ({ selectedRow, handleCloseModal }) =>
                                         </tr>
 
                                         <tr>
-                                            <td style={{border: "1px double black"}}>{selectedRow.modal.cpuModule.informationHdd.logicalDisk1.disk}</td>
-                                            <td style={{border: "1px double black"}}>{selectedRow.modal.cpuModule.informationHdd.logicalDisk1.volume}</td>
-                                            <td style={{border: "1px double black"}}>{selectedRow.modal.cpuModule.informationHdd.logicalDisk1.free}</td>
-                                            <td style={{border: "1px double black"}}>{selectedRow.modal.cpuModule.informationHdd.logicalDisk1.threshold}</td>
+                                            <td >{selectedRow.modal.cpuModule.informationHdd.logicalDisk1.disk}</td>
+                                            <td >{selectedRow.modal.cpuModule.informationHdd.logicalDisk1.volume}</td>
+                                            <td >{selectedRow.modal.cpuModule.informationHdd.logicalDisk1.free}</td>
+                                            <td >{selectedRow.modal.cpuModule.informationHdd.logicalDisk1.threshold}</td>
                                         </tr>
 
                                         <tr>
-                                            <td style={{border: "1px double black"}}>{selectedRow.modal.cpuModule.informationHdd.logicalDisk2.disk}</td>
-                                            <td style={{border: "1px double black"}}>{selectedRow.modal.cpuModule.informationHdd.logicalDisk2.volume}</td>
-                                            <td style={{border: "1px double black"}}>{selectedRow.modal.cpuModule.informationHdd.logicalDisk2.free}</td>
-                                            <td style={{border: "1px double black"}}>{selectedRow.modal.cpuModule.informationHdd.logicalDisk2.threshold}</td>
+                                            <td >{selectedRow.modal.cpuModule.informationHdd.logicalDisk2.disk}</td>
+                                            <td >{selectedRow.modal.cpuModule.informationHdd.logicalDisk2.volume}</td>
+                                            <td >{selectedRow.modal.cpuModule.informationHdd.logicalDisk2.free}</td>
+                                            <td >{selectedRow.modal.cpuModule.informationHdd.logicalDisk2.threshold}</td>
                                         </tr>
 
                                         <tr>
-                                            <td style={{border: "1px double black"}}>{selectedRow.modal.cpuModule.informationHdd.logicalDisk3.disk}</td>
-                                            <td style={{border: "1px double black"}}>{selectedRow.modal.cpuModule.informationHdd.logicalDisk3.volume}</td>
-                                            <td style={{border: "1px double black"}}>{selectedRow.modal.cpuModule.informationHdd.logicalDisk3.free}</td>
-                                            <td style={{border: "1px double black"}}>{selectedRow.modal.cpuModule.informationHdd.logicalDisk3.threshold}</td>
+                                            <td >{selectedRow.modal.cpuModule.informationHdd.logicalDisk3.disk}</td>
+                                            <td >{selectedRow.modal.cpuModule.informationHdd.logicalDisk3.volume}</td>
+                                            <td >{selectedRow.modal.cpuModule.informationHdd.logicalDisk3.free}</td>
+                                            <td >{selectedRow.modal.cpuModule.informationHdd.logicalDisk3.threshold}</td>
                                         </tr>
                                         </tbody>
 
@@ -145,7 +145,7 @@ const ModalClient: React.FC<ModalProps> = ({ selectedRow, handleCloseModal }) =>
 
                     <div>
                         <h3 style={{marginTop: '-10px'}} >Сетевые интерфейсы:</h3>
-                        <table style={{ width: "100%" }}>
+                        <table className={'table_modal'}>
                             <tbody>
                             <tr>
                                 <th>Имя</th>
@@ -156,11 +156,11 @@ const ModalClient: React.FC<ModalProps> = ({ selectedRow, handleCloseModal }) =>
 
                             </tr>
                             <tr>
-                                <td style={{border: "1px double black"}}>{selectedRow.modal.networkInterfaces.name}</td>
-                                <td style={{border: "1px double black"}}>{selectedRow.modal.networkInterfaces.speed} Mb/s</td>
-                                <td style={{border: "1px double black"}}>{selectedRow.modal.networkInterfaces.mac}</td>
-                                <td style={{border: "1px double black"}}>{selectedRow.modal.networkInterfaces.ipMask}</td>
-                                <td style={{border: "1px double black"}}>IN - {selectedRow.modal.networkInterfaces.currentSpeedIn} Kb/s
+                                <td >{selectedRow.modal.networkInterfaces.name}</td>
+                                <td >{selectedRow.modal.networkInterfaces.speed} Mb/s</td>
+                                <td >{selectedRow.modal.networkInterfaces.mac}</td>
+                                <td >{selectedRow.modal.networkInterfaces.ipMask}</td>
+                                <td >IN - {selectedRow.modal.networkInterfaces.currentSpeedIn} Kb/s
                                     <br/>OUT - {selectedRow.modal.networkInterfaces.currentSpeedOut} Kb/s </td>
                             </tr>
                             </tbody>

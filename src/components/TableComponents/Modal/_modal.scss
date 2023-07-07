@@ -1,0 +1,15 @@
+$border: 1px double black;
+$width: 100%;
+
+.table_modal{
+  width: $width;
+  tr{
+    td {
+      border: $border;
+    }
+  }
+
+}
+
+
+
