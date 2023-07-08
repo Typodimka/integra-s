@@ -24,9 +24,9 @@ const TableHeader: React.FC<TableHeaderProps> = ({ sortBy, sortDirection, handle
 
                 <TableCell style={{ width: '10%' }}>
                     <TableSortLabel
-                        active={sortBy === 'ip-address-server'}
+                        active={sortBy === 'ipAddressServer'}
                         direction={sortDirection}
-                        onClick={() => handleSort('ip-address-server')}
+                        onClick={() => handleSort('ipAddressServer')}
                     >
                         IP адресс сервера
                     </TableSortLabel>
