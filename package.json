@@ -29,7 +29,7 @@
     "git": "^0.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-redux": "^8.1.0",
+    "react-redux": "^8.1.1",
     "react-scripts": "5.0.1",
     "sass": "^1.63.6",
     "scss": "^0.2.4",

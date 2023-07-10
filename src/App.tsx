@@ -3,29 +3,13 @@ import Container from '@mui/material/Container';
 import { Navigation } from './components/Navigation';
 import TableClient from './components/TableClient';
 import TableServer from './components/TableServer';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { ColorModeContext } from './hooks/theme';
+import { useColorMode,  ColorModeContext} from './theme/theme';
+import {ThemeProvider } from "@mui/material";
+
 
 function App() {
-    const [mode, setMode] = React.useState<'light' | 'dark'>('light'); // Обновление типа на 'light' | 'dark'
-    const colorMode = React.useMemo(
-        () => ({
-            toggleColorMode: () => {
-                setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
-            },
-        }),
-        []
-    );
+    const { colorMode,  theme } = useColorMode();
 
-    const theme = React.useMemo(
-        () =>
-            createTheme({
-                palette: {
-                    mode: mode,
-                },
-            }),
-        [mode]
-    );
 
     return (
         <ColorModeContext.Provider value={colorMode}>

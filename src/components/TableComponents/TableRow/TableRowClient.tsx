@@ -8,19 +8,24 @@ interface TableRowClientProps {
     row: IClient;
     index: number;
     setSelectedRow: (row: IClient) => void;
+    isActive?: boolean; // Добавлен тип isActive
 }
 
-const TableRowClient: React.FC<TableRowClientProps> = ({setSelectedRow,  row, index }) => {
+const TableRowClient: React.FC<TableRowClientProps> = ({setSelectedRow,  row, index, isActive}) => {
 
     const handleRowClick = (row: IClient) => {
         setSelectedRow(row);
     };
+
+    const activeClass = isActive ? 'active' : '';
+
 
     return(
 
                 <TableRow hover role="checkbox"
                     key={index}
                           onClick={() => handleRowClick(row)}
+                          className={activeClass}
                          >
                     <TableCell className="MuiTableCell-sizeSmall">{row.name}</TableCell>
                     <TableCell className="MuiTableCell-sizeSmall">{row.ipAddressServer}</TableCell>

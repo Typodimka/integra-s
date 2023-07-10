@@ -8,7 +8,9 @@ import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
-import { ColorModeContext } from '../hooks/theme';
+import {  ColorModeContext } from '../theme/theme';
+
+
 
 export function Navigation() {
     const theme = useTheme();
@@ -27,7 +29,7 @@ export function Navigation() {
                         КОНСОРЦИУМ ИНТЕГРА-С
                     </Typography>
                     <Box>
-                        {theme.palette.mode === 'dark' ? 'Dark' : 'Light'} mode
+                        {theme.palette.mode === 'dark' ? 'Dark' : 'Light'} Тема
                         <IconButton
                             sx={{ ml: 1 }}
                             onClick={colorMode.toggleColorMode}
