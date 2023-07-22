@@ -22,10 +22,6 @@ const TableClient: React.FC = () => {
     }, [])
 
 
-    // const {data} = useClients()
-
-
-
     const [sortBy, setSortBy] = useState<string | null>(null);
     const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
     const [searchQuery, setSearchQuery] = useState<string>('');
@@ -89,8 +85,7 @@ const TableClient: React.FC = () => {
                 <Table stickyHeader aria-label="sticky table" style={{ border: '1px solid #C0C0C0' }}>
                     <TableHeader sortBy={sortBy} sortDirection={sortDirection} handleSort={handleSort} table={'client'} />
 
-                    {isLoading && <h1>Идет загрузка...</h1>}
-                    {error && <h1>Ошибка получения данных.</h1>}
+
 
                     <TableBody>
                         {sortedData.map((row, index) => (

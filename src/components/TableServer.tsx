@@ -87,8 +87,6 @@ const TableServer: React.FC = () => {
                 <Table stickyHeader aria-label="sticky table" style={{ border: '1px solid #C0C0C0' }}>
                     <TableHeader sortBy={sortBy} sortDirection={sortDirection} handleSort={handleSort} table = {'server'} />
 
-                    {isLoading && <h1>Идет загрузка...</h1>}
-                    {error && <h1>Ошибка получения данных.</h1>}
 
                     <TableBody>
                         {sortedData.map((row, index) => (

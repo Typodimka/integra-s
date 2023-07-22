@@ -4,7 +4,7 @@ import {createAsyncThunk} from "@reduxjs/toolkit";
 
 
 export const fetchServers = createAsyncThunk(
-    'client/fetchAllClient',
+    'client/fetchAllServer',
     async (_, thunkApi) => {
         try {
             const response = await axios.get<IServer[]>('./db/dbServers.json')
