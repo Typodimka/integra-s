@@ -1,19 +1,26 @@
-import React, { useState  } from 'react';
+import React, {useEffect, useState} from 'react';
 import {
     Table,
     TableContainer,
     TableBody, TextField,
 } from '@material-ui/core';
-import {IServer} from '../types/types';
-import {useServer} from '../hooks/api'
+import {IServer} from '../models/types';
 import Modal from "./TableComponents/Modal/modal";
 import TableHeader from "./TableComponents/TableHeader/TableHeader";
 import TableRowServer from "./TableComponents/TableRow/TableRowServer";
+import {useAddDispatch, useAppSelector} from "../hooks/redux";
+import {fetchServers} from "../redux/servers/ServersCreators";
 
 const TableServer: React.FC = () => {
 
+    const dispatch = useAddDispatch()
+    const {servers, isLoading, error} = useAppSelector(state => state.serverReducer)
+
+    useEffect(() => {
+        dispatch(fetchServers())
+    }, [])
+
     //Получения данных с функции БД
-    const {data} = useServer()
 
     const [sortBy, setSortBy] = useState<string | null>(null);
     const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
@@ -26,8 +33,6 @@ const TableServer: React.FC = () => {
     const handleCloseModal = () => {
         setSelectedRow(null);
     };
-
-
 
 
     const handleSort = (column: string) => {
@@ -44,7 +49,7 @@ const TableServer: React.FC = () => {
         setSearchQuery(event.target.value);
     };
 
-    const filteredData = data.filter((row) => {
+    const filteredData = servers.filter((row) => {
         // Фильтрацию по каждому столбцу
         return (
             row.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -81,6 +86,9 @@ const TableServer: React.FC = () => {
             <TableContainer style={{ maxHeight: '350px', overflow: 'auto'}}>
                 <Table stickyHeader aria-label="sticky table" style={{ border: '1px solid #C0C0C0' }}>
                     <TableHeader sortBy={sortBy} sortDirection={sortDirection} handleSort={handleSort} table = {'server'} />
+
+                    {isLoading && <h1>Идет загрузка...</h1>}
+                    {error && <h1>Ошибка получения данных.</h1>}
 
                     <TableBody>
                         {sortedData.map((row, index) => (

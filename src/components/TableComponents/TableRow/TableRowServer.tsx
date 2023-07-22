@@ -1,7 +1,7 @@
 import React from "react";
 import { TableCell, TableRow} from '@material-ui/core'
 import ProgressBar from "../ProgressBar/ProgressBar";
-import {IServer} from "../../../types/types";
+import {IServer} from "../../../models/types";
 
 
 interface TableRowServerProps {

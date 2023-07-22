@@ -7,7 +7,7 @@ import {
     DialogActions,
     Button,
 } from "@mui/material";
-import { IClient, IServer } from '../../../types/types';
+import { IClient, IServer } from '../../../models/types';
 import "./_modal.scss"
 
 interface ModalProps {

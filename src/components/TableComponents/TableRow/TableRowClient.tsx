@@ -1,23 +1,21 @@
 import React from "react";
 import { TableCell, TableRow} from '@material-ui/core';
 import ProgressBar from "../ProgressBar/ProgressBar";
-import {IClient} from "../../../types/types";
+import {IClient} from "../../../models/types";
 
 
 interface TableRowClientProps {
     row: IClient;
     index: number;
     setSelectedRow: (row: IClient) => void;
-    isActive?: boolean; // Добавлен тип isActive
 }
 
-const TableRowClient: React.FC<TableRowClientProps> = ({setSelectedRow,  row, index, isActive}) => {
+const TableRowClient: React.FC<TableRowClientProps> = ({setSelectedRow,  row, index}) => {
 
     const handleRowClick = (row: IClient) => {
         setSelectedRow(row);
     };
 
-    const activeClass = isActive ? 'active' : '';
 
 
     return(
@@ -25,7 +23,7 @@ const TableRowClient: React.FC<TableRowClientProps> = ({setSelectedRow,  row, in
                 <TableRow hover role="checkbox"
                     key={index}
                           onClick={() => handleRowClick(row)}
-                          className={activeClass}
+
                          >
                     <TableCell className="MuiTableCell-sizeSmall">{row.name}</TableCell>
                     <TableCell className="MuiTableCell-sizeSmall">{row.ipAddressServer}</TableCell>

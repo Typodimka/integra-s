@@ -12,15 +12,18 @@ function App() {
 
 
     return (
-        <ColorModeContext.Provider value={colorMode}>
-            <ThemeProvider theme={theme}>
-                <Navigation />
-                <Container maxWidth="xl" sx={{ p: '0px !important' }}>
-                    <TableClient />
-                    <TableServer />
-                </Container>
-            </ThemeProvider>
-        </ColorModeContext.Provider>
+            <ColorModeContext.Provider value={colorMode}>
+                <ThemeProvider theme={theme}>
+                    <Navigation />
+                    <Container maxWidth="xl" sx={{ p: '0px !important' }}>
+                        <TableClient />
+                        <TableServer />
+                    </Container>
+                </ThemeProvider>
+            </ColorModeContext.Provider>
+
+
+
     );
 }
 

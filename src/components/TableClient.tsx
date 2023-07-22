@@ -1,19 +1,28 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {
     Table,
     TableContainer,
     TableBody,
     TextField,
 } from '@material-ui/core';
-import { IClient } from "../types/types";
+import { IClient } from "../models/types";
 import Modal from "./TableComponents/Modal/modal";
 import TableHeader from './TableComponents/TableHeader/TableHeader';
 import TableRowClient from "./TableComponents/TableRow/TableRowClient";
-import { useClients } from "../hooks/api";
+import {useAddDispatch, useAppSelector} from '../hooks/redux';
+import {fetchClients} from "../redux/clients/ClientsCreators";
 
 const TableClient: React.FC = () => {
-    const { data } = useClients();
 
+    const dispatch = useAddDispatch()
+    const {clients, isLoading, error} = useAppSelector(state => state.clientReducer)
+
+    useEffect(() => {
+        dispatch(fetchClients())
+    }, [])
+
+
+    // const {data} = useClients()
 
 
 
@@ -41,7 +50,7 @@ const TableClient: React.FC = () => {
         setSearchQuery(event.target.value);
     };
 
-    const filteredData = data.filter((row) => {
+    const filteredData = clients.filter((row) => {
         // Фильтрацию по каждому столбцу
         return (
             row.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -79,6 +88,9 @@ const TableClient: React.FC = () => {
             <TableContainer style={{ maxHeight: '350px', overflow: 'auto'}}>
                 <Table stickyHeader aria-label="sticky table" style={{ border: '1px solid #C0C0C0' }}>
                     <TableHeader sortBy={sortBy} sortDirection={sortDirection} handleSort={handleSort} table={'client'} />
+
+                    {isLoading && <h1>Идет загрузка...</h1>}
+                    {error && <h1>Ошибка получения данных.</h1>}
 
                     <TableBody>
                         {sortedData.map((row, index) => (
