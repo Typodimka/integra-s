@@ -14,7 +14,7 @@ import {fetchServers} from "../redux/servers/ServersCreators";
 const TableServer: React.FC = () => {
 
     const dispatch = useAddDispatch()
-    const {servers, isLoading, error} = useAppSelector(state => state.serverReducer)
+    const {data, isLoading, error} = useAppSelector(state => state.serverReducer)
 
     useEffect(() => {
         dispatch(fetchServers())
@@ -49,7 +49,7 @@ const TableServer: React.FC = () => {
         setSearchQuery(event.target.value);
     };
 
-    const filteredData = servers.filter((row) => {
+    const filteredData = data.filter((row) => {
         // Фильтрацию по каждому столбцу
         return (
             row.name.toLowerCase().includes(searchQuery.toLowerCase()) ||

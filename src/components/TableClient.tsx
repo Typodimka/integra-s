@@ -15,11 +15,13 @@ import {fetchClients} from "../redux/clients/ClientsCreators";
 const TableClient: React.FC = () => {
 
     const dispatch = useAddDispatch()
-    const {clients, isLoading, error} = useAppSelector(state => state.clientReducer)
 
-    useEffect(() => {
-        dispatch(fetchClients())
-    }, [])
+    const {data, isLoading, error} = useAppSelector(state => state.clientReducer)
+
+
+        useEffect(() => {
+            dispatch(fetchClients())
+        }, [])
 
 
     const [sortBy, setSortBy] = useState<string | null>(null);
@@ -46,7 +48,7 @@ const TableClient: React.FC = () => {
         setSearchQuery(event.target.value);
     };
 
-    const filteredData = clients.filter((row) => {
+    const filteredData = data.filter((row) => {
         // Фильтрацию по каждому столбцу
         return (
             row.name.toLowerCase().includes(searchQuery.toLowerCase()) ||

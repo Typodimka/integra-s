@@ -3,13 +3,13 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {fetchServers} from "./ServersCreators";
 
 interface ClientState {
-    servers: IServer[];
+    data: IServer[];
     isLoading: boolean;
     error: string;
 }
 
 const initialState: ClientState = {
-    servers: [],
+    data: [],
     isLoading: false,
     error: '',
 }
@@ -24,7 +24,7 @@ export const serverSlice = createSlice({
         [fetchServers.fulfilled.type]: (state, action: PayloadAction<IServer[]>) => {
             state.isLoading = false;
             state.error = '';
-            state.servers = action.payload
+            state.data = action.payload
         },
         [fetchServers.pending.type]: (state) => {
             state.isLoading = true;

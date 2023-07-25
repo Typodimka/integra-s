@@ -3,13 +3,13 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {fetchClients} from "./ClientsCreators";
 
 interface ClientState {
-    clients: IClient[];
+    data: IClient[];
     isLoading: boolean;
     error: string;
 }
 
 const initialState: ClientState = {
-    clients: [],
+    data: [],
     isLoading: false,
     error: '',
 }
@@ -24,7 +24,7 @@ export const clientSlice = createSlice({
         [fetchClients.fulfilled.type]: (state, action: PayloadAction<IClient[]>) => {
             state.isLoading = false;
             state.error = '';
-            state.clients = action.payload
+            state.data = action.payload
         },
         [fetchClients.pending.type]: (state) => {
             state.isLoading = true;

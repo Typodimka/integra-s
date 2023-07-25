@@ -5,7 +5,7 @@ import {serverSlice} from "./servers/serversSlice";
 
 const rootReducer = combineReducers({
     clientReducer: clientSlice.reducer,
-    serverReducer: serverSlice.reducer
+    serverReducer: serverSlice.reducer,
 })
 
 
