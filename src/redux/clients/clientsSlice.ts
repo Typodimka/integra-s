@@ -6,6 +6,7 @@ interface ClientState {
     data: IClient[];
     isLoading: boolean;
     error: string;
+
 }
 
 const initialState: ClientState = {

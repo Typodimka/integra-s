@@ -3,7 +3,7 @@ import Container from '@mui/material/Container';
 import { Navigation } from './components/Navigation';
 import TableClient from './components/TableClient';
 import TableServer from './components/TableServer';
-import { useColorMode,  ColorModeContext} from './theme/theme';
+import { useColorMode,  ColorModeContext} from './helpers/theme';
 import {ThemeProvider } from "@mui/material";
 
 

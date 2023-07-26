@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import {
     Table,
     TableContainer,
@@ -8,24 +8,18 @@ import {IServer} from '../models/types';
 import Modal from "./TableComponents/Modal/modal";
 import TableHeader from "./TableComponents/TableHeader/TableHeader";
 import TableRowServer from "./TableComponents/TableRow/TableRowServer";
-import {useAddDispatch, useAppSelector} from "../hooks/redux";
-import {fetchServers} from "../redux/servers/ServersCreators";
+import { useAppSelector} from "../hooks/redux";
+import {SortedServer} from "../helpers/sorted/sortedServerData";
+
 
 const TableServer: React.FC = () => {
 
-    const dispatch = useAddDispatch()
-    const {data, isLoading, error} = useAppSelector(state => state.serverReducer)
+    const {isLoading, error} = useAppSelector(state => state.serverReducer)
 
-    useEffect(() => {
-        dispatch(fetchServers())
-    }, [])
+    const {sortedData, handleSearch, sortBy,  sortDirection , searchQuery, handleSort } = SortedServer()
 
-    //Получения данных с функции БД
 
-    const [sortBy, setSortBy] = useState<string | null>(null);
-    const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
     const [selectedRow, setSelectedRow] = useState<IServer | null>(null);
-    const [searchQuery, setSearchQuery] = useState<string>('');
 
 
 
@@ -35,40 +29,6 @@ const TableServer: React.FC = () => {
     };
 
 
-    const handleSort = (column: string) => {
-        if (column === sortBy) {
-            setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
-        } else {
-            setSortBy(column);
-            setSortDirection('asc');
-        }
-    };
-
-    //Фильтрация
-    const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchQuery(event.target.value);
-    };
-
-    const filteredData = data.filter((row) => {
-        // Фильтрацию по каждому столбцу
-        return (
-            row.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            row.ipAddressServer.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            row.regFile.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            row.os.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            row.timeStart.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            row.version.toLowerCase().includes(searchQuery.toLowerCase())
-        );
-    });
-
-    //Функция сортировки столбцов
-    const sortedData = [...filteredData].sort((a, b) => {
-        if (sortBy) {
-            const sortOrder = sortDirection === 'asc' ? 1 : -1;
-            return a[sortBy] > b[sortBy] ? sortOrder : -sortOrder;
-        }
-        return 0;
-    });
 
 
     return (
@@ -87,6 +47,8 @@ const TableServer: React.FC = () => {
                 <Table stickyHeader aria-label="sticky table" style={{ border: '1px solid #C0C0C0' }}>
                     <TableHeader sortBy={sortBy} sortDirection={sortDirection} handleSort={handleSort} table = {'server'} />
 
+                    {isLoading && <h3>Loading...</h3>}
+                    {error && <h3 style={{color: 'red'}}>Error</h3>}
 
                     <TableBody>
                         {sortedData.map((row, index) => (

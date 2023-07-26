@@ -153,8 +153,8 @@ const ModalClient: React.FC<ModalProps> = ({ selectedRow, handleCloseModal }) =>
                                 <th>МАС</th>
                                 <th>ip - mask</th>
                                 <th>Тек.скорость</th>
-
                             </tr>
+
                             <tr>
                                 <td >{selectedRow.modal.networkInterfaces.name}</td>
                                 <td >{selectedRow.modal.networkInterfaces.speed} Mb/s</td>
