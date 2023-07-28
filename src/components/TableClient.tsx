@@ -30,21 +30,23 @@ const TableClient: React.FC = () => {
 
     return (
         <>
-            <div style ={{display: 'flex' , justifyContent: "space-between", paddingTop: '10px'}} >
+            <div style ={{display: 'flex' , justifyContent: "space-between", padding: '10px', paddingBottom: 0  }} >
                 <h3>Статус Клиента</h3>
 
                 {/*Поисковая строка*/}
-                <TextField
-                    label="Поиск по клиентам"
-                    value={searchQuery}
-                    onChange={handleSearch}
-                    style={{ marginBottom: "20px", marginLeft: '200px' }}
-                />
+                    <TextField
+                        label="Поиск по клиентам"
+                        value={searchQuery}
+                        onChange={handleSearch}
+                        sx={{mb: "20px", ml: '200px' }}
+                        variant="standard"
+                    />
+
             </div>
 
 
-            <TableContainer style={{ maxHeight: '350px', overflow: 'auto'}}>
-                <Table stickyHeader aria-label="sticky table" style={{ border: '1px solid #C0C0C0' }}>
+            <TableContainer style={{ maxHeight: '360px', overflow: 'auto'}}>
+                <Table stickyHeader aria-label="sticky table" >
 
                     {/*Шапка таблицы*/}
                     <TableHeader sortBy={sortBy} sortDirection={sortDirection} handleSort={handleSort} table={'client'} />

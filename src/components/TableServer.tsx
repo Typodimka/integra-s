@@ -34,7 +34,7 @@ const TableServer: React.FC = () => {
 
     return (
         <>
-            <div style ={{display: 'flex', marginTop: '10px', justifyContent: "space-between"}}>
+            <div style ={{display: 'flex',  justifyContent: "space-between", padding: '10px', paddingBottom: 0 }}>
                 <h3>Статус Клиента</h3>
                 {/*Поисковая строка*/}
                 <TextField
@@ -42,10 +42,12 @@ const TableServer: React.FC = () => {
                     value={searchQuery}
                     onChange={handleSearch}
                     style={{ marginBottom: "20px", marginLeft: '200px' }}
+                    variant="standard"
+
                 />
             </div>
-            <TableContainer style={{ maxHeight: '350px', overflow: 'auto'}}>
-                <Table stickyHeader aria-label="sticky table" style={{ border: '1px solid #C0C0C0' }}>
+            <TableContainer style={{ maxHeight: '360px', overflow: 'auto'}}>
+                <Table stickyHeader aria-label="sticky table" >
 
                     {/*Шапка таблицы*/}
                     <TableHeader sortBy={sortBy} sortDirection={sortDirection} handleSort={handleSort} table = {'server'} />
