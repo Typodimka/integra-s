@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/integra-s/static/css/main.b53be7a7.css",
-    "main.js": "/integra-s/static/js/main.cca40224.js",
-    "index.html": "/integra-s/index.html",
-    "main.b53be7a7.css.map": "/integra-s/static/css/main.b53be7a7.css.map",
-    "main.cca40224.js.map": "/integra-s/static/js/main.cca40224.js.map"
+    "main.css": "/integra-s.github.io/static/css/main.b53be7a7.css",
+    "main.js": "/integra-s.github.io/static/js/main.672e06df.js",
+    "index.html": "/integra-s.github.io/index.html",
+    "main.b53be7a7.css.map": "/integra-s.github.io/static/css/main.b53be7a7.css.map",
+    "main.672e06df.js.map": "/integra-s.github.io/static/js/main.672e06df.js.map"
   },
   "entrypoints": [
     "static/css/main.b53be7a7.css",
-    "static/js/main.cca40224.js"
+    "static/js/main.672e06df.js"
   ]
 }
