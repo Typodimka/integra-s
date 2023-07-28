@@ -3,7 +3,7 @@ import {
     Table,
     TableContainer,
     TableBody, TextField,
-} from '@material-ui/core';
+} from '@mui/material';
 import {IServer} from '../models/types';
 import Modal from "./TableComponents/Modal/modal";
 import TableHeader from "./TableComponents/TableHeader/TableHeader";
@@ -14,20 +14,21 @@ import {SortedServer} from "../helpers/sorted/sortedServerData";
 
 const TableServer: React.FC = () => {
 
+    const [selectedRow, setSelectedRow] = useState<IServer | null>(null);
+
+    //Состояние загрузки и ошибки.
     const {isLoading, error} = useAppSelector(state => state.serverReducer)
 
+    //Функции сортировки и состояния.
     const {sortedData, handleSearch, sortBy,  sortDirection , searchQuery, handleSort } = SortedServer()
 
 
-    const [selectedRow, setSelectedRow] = useState<IServer | null>(null);
 
 
-
-    //Фунция закрытия модального окна
+    //Фунция закрытия модального окна.
     const handleCloseModal = () => {
         setSelectedRow(null);
     };
-
 
 
 
@@ -35,7 +36,7 @@ const TableServer: React.FC = () => {
         <>
             <div style ={{display: 'flex', marginTop: '10px', justifyContent: "space-between"}}>
                 <h3>Статус Клиента</h3>
-
+                {/*Поисковая строка*/}
                 <TextField
                     label="Поиск по серверам"
                     value={searchQuery}
@@ -45,11 +46,14 @@ const TableServer: React.FC = () => {
             </div>
             <TableContainer style={{ maxHeight: '350px', overflow: 'auto'}}>
                 <Table stickyHeader aria-label="sticky table" style={{ border: '1px solid #C0C0C0' }}>
+
+                    {/*Шапка таблицы*/}
                     <TableHeader sortBy={sortBy} sortDirection={sortDirection} handleSort={handleSort} table = {'server'} />
 
                     {isLoading && <h3>Loading...</h3>}
                     {error && <h3 style={{color: 'red'}}>Error</h3>}
 
+                    {/*Содержимое таблицы*/}
                     <TableBody>
                         {sortedData.map((row, index) => (
                             <TableRowServer
@@ -62,6 +66,7 @@ const TableServer: React.FC = () => {
                 </Table>
             </TableContainer>
 
+            {/*Модальное окно строки*/}
             <Modal selectedRow={selectedRow} handleCloseModal={handleCloseModal}  />
 
         </>

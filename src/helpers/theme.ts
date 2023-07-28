@@ -29,6 +29,10 @@ export function useColorMode() {
             createTheme({
                 palette: {
                     mode: mode,
+                    background: {
+                        default: mode !== 'light' ? '#212121' :'#fff',
+                        paper: mode !== 'light' ? '#212121' :'#fff',
+                    }
                 },
             }),
         [mode]

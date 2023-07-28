@@ -4,7 +4,7 @@ import {
     TableContainer,
     TableBody,
     TextField,
-} from '@material-ui/core';
+} from '@mui/material';
 import {IClient} from "../models/types";
 import Modal from "./TableComponents/Modal/modal";
 import TableHeader from './TableComponents/TableHeader/TableHeader';
@@ -13,22 +13,27 @@ import { useAppSelector} from '../hooks/redux';
 import { SortedClient } from '../helpers/sorted/sortedClientData'
 
 const TableClient: React.FC = () => {
-    const { isLoading, error } = useAppSelector((state) => state.clientReducer);
-
-    const {sortedData, handleSearch, sortBy,  sortDirection , searchQuery, handleSort } = SortedClient()
 
     const [selectedRow, setSelectedRow] = useState<IClient | null>(null);
 
-    // Функция Закрытия модального окна
+    //Состояние загрузки и ошибки.
+    const { isLoading, error } = useAppSelector((state) => state.clientReducer);
+
+    //Функции сортировки и состояния.
+    const {sortedData, handleSearch, sortBy,  sortDirection , searchQuery, handleSort } = SortedClient()
+
+
+    //Фунция закрытия модального окна.
     const handleCloseModal = () => {
         setSelectedRow(null);
     };
 
     return (
         <>
-            <div style ={{display: 'flex', marginTop: '10px', justifyContent: "space-between"}}>
+            <div style ={{display: 'flex' , justifyContent: "space-between", paddingTop: '10px'}} >
                 <h3>Статус Клиента</h3>
 
+                {/*Поисковая строка*/}
                 <TextField
                     label="Поиск по клиентам"
                     value={searchQuery}
@@ -40,11 +45,13 @@ const TableClient: React.FC = () => {
 
             <TableContainer style={{ maxHeight: '350px', overflow: 'auto'}}>
                 <Table stickyHeader aria-label="sticky table" style={{ border: '1px solid #C0C0C0' }}>
-                    <TableHeader sortBy={sortBy} sortDirection={sortDirection} handleSort={handleSort} table={'client'} />
 
+                    {/*Шапка таблицы*/}
+                    <TableHeader sortBy={sortBy} sortDirection={sortDirection} handleSort={handleSort} table={'client'} />
                     {isLoading && <h3>Loading...</h3>}
                     {error && <h3 style={{color: 'red'}}>Error</h3>}
 
+                    {/*Содержимое таблицы*/}
                     <TableBody>
                         {sortedData.map((row, index) => (
                             <TableRowClient
@@ -57,6 +64,7 @@ const TableClient: React.FC = () => {
                 </Table>
             </TableContainer>
 
+            {/*Модальное окно строки. */}
             <Modal selectedRow={selectedRow} handleCloseModal={handleCloseModal} />
         </>
     );

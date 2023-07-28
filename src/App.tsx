@@ -4,7 +4,7 @@ import { Navigation } from './components/Navigation';
 import TableClient from './components/TableClient';
 import TableServer from './components/TableServer';
 import { useColorMode,  ColorModeContext} from './helpers/theme';
-import {ThemeProvider } from "@mui/material";
+import {Paper, ThemeProvider} from "@mui/material";
 
 
 function App() {
@@ -16,8 +16,11 @@ function App() {
                 <ThemeProvider theme={theme}>
                     <Navigation />
                     <Container maxWidth="xl" sx={{ p: '0px !important' }}>
-                        <TableClient />
-                        <TableServer />
+                        <Paper>
+                            <TableClient />
+                            <TableServer />
+                        </Paper>
+
                     </Container>
                 </ThemeProvider>
             </ColorModeContext.Provider>

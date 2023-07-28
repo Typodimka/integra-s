@@ -1,5 +1,5 @@
 import React from 'react';
-import { TableHead, TableRow, TableCell, TableSortLabel } from '@material-ui/core';
+import { TableHead, TableRow, TableCell, TableSortLabel } from '@mui/material';
 
 interface TableHeaderProps {
     sortBy: string | null;
@@ -10,7 +10,7 @@ interface TableHeaderProps {
 
 const TableHeader: React.FC<TableHeaderProps> = ({ sortBy, sortDirection, handleSort, table }) => {
     return (
-        <TableHead style={{height: '10px'}}>
+        <TableHead style={{height: 10}}>
             <TableRow>
                 <TableCell style={{ width: '10%' }} >
                     <TableSortLabel

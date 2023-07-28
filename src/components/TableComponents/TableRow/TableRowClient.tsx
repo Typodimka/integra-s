@@ -1,5 +1,5 @@
 import React from "react";
-import { TableCell, TableRow} from '@material-ui/core';
+import { TableCell, TableRow} from '@mui/material';
 import ProgressBar from "../ProgressBar/ProgressBar";
 import {IClient} from "../../../models/types";
 
@@ -25,18 +25,18 @@ const TableRowClient: React.FC<TableRowClientProps> = ({setSelectedRow,  row, in
                           onClick={() => handleRowClick(row)}
 
                          >
-                    <TableCell className="MuiTableCell-sizeSmall">{row.name}</TableCell>
-                    <TableCell className="MuiTableCell-sizeSmall">{row.ipAddressServer}</TableCell>
-                    <TableCell className="MuiTableCell-sizeSmall">{row.user}</TableCell>
-                    <TableCell className="MuiTableCell-sizeSmall">{row.os}</TableCell>
-                    <TableCell className="MuiTableCell-sizeSmall">{row.timeStart}</TableCell>
-                    <TableCell className="MuiTableCell-sizeSmall">{row.version}</TableCell>
-                    <TableCell className="MuiTableCell-sizeSmall">
+                    <TableCell sx={{paddingTop: '5px', paddingBottom: '5px'}} >{row.name}</TableCell>
+                    <TableCell sx={{paddingTop: '5px', paddingBottom: '5px'}}>{row.ipAddressServer}</TableCell>
+                    <TableCell sx={{paddingTop: '5px', paddingBottom: '5px'}}>{row.user}</TableCell>
+                    <TableCell sx={{paddingTop: '5px', paddingBottom: '5px'}}>{row.os}</TableCell>
+                    <TableCell sx={{paddingTop: '5px', paddingBottom: '5px'}}>{row.timeStart}</TableCell>
+                    <TableCell sx={{paddingTop: '5px', paddingBottom: '5px'}}>{row.version}</TableCell>
+                    <TableCell sx={{paddingTop: '5px', paddingBottom: '5px'}}>
                         { row.cpuUsage<100 && <ProgressBar usage={row.cpuUsage}/>}
                         {row.cpuUsage>100 && <span>{row.cpuUsage}</span>  }
                     </TableCell >
-                    <TableCell className="MuiTableCell-sizeSmall">{row.memoryUsage}</TableCell>
-                    <TableCell className="MuiTableCell-sizeSmall">
+                    <TableCell sx={{paddingTop: '5px', paddingBottom: '5px'}}>{row.memoryUsage}</TableCell>
+                    <TableCell sx={{paddingTop: '5px', paddingBottom: '5px'}}>
                         <ProgressBar usage={row.hddUsage}/>
                     </TableCell>
 
